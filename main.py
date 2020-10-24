@@ -131,7 +131,7 @@ async def cmd_reminder_on(message: types.Message):
         file_name = 'responsible_in_schedule.txt'
     elif message.get_command(pure=True) == reminders_stop['homework'].command:
         global is_homework_reminder
-        if not is_schedule_reminder:
+        if not is_homework_reminder:
             await message.answer("Напоминание в Trello не включено")
             return
         is_homework_reminder = False
